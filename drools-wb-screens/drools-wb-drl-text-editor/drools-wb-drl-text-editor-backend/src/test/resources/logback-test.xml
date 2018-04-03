@@ -16,7 +16,34 @@
   -->
 <configuration>
 
-  <logger name="org.drools" level="info"/>
+  <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- %l lowers performance -->
+      <!--<pattern>%d [%t] %-5p %l%n  %m%n</pattern>-->
+      <!--<pattern>%d [%t] %-5p %m%n</pattern>-->
+      <pattern>%d [%thread] %level %logger{35} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="KieSift" class="org.kie.workbench.common.services.backend.logback.appender.KieSiftingAppender">
+    <discriminator class="org.kie.workbench.common.services.backend.logback.appender.UUIDThreadNameDiscriminator"/>
+    <sift>
+      <appender name="${compilation.ID}" class="org.kie.workbench.common.services.backend.logback.appender.KieSiftingAppender">
+        <encoder>
+          <pattern>%d [%thread] %level %logger{35} - %msg%n</pattern>
+        </encoder>
+      </appender>
+    </sift>
+  </appender>
+
+  <logger name="org.drools" level="INFO"/>
+  <logger name="org.kie" level="INFO"/>
+  <logger name="org.guvnor" level="INFO"/>
+
+  <root level="INFO">
+    <appender-ref ref="KieSift" />
+    <appender-ref ref="consoleAppender"/>
+  </root>
 
 </configuration>
 

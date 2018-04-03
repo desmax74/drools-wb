@@ -7,6 +7,55 @@
   <version>1.0.0</version>
   <name>DslSentencesInDrlFile</name>
   <description></description>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>kie.io.takari.maven.plugins</groupId>
+        <artifactId>kie-takari-lifecycle-plugin</artifactId>
+        <version>1.13.3</version>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <compilerId>jdt</compilerId>
+          <source>1.8</source>
+          <target>1.8</target>
+          <failOnError>false</failOnError>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <phase>none</phase>
+          </execution>
+        </executions>
+        <configuration>
+          <skipMain>true</skipMain>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-takari-plugin</artifactId>
+        <version>${version.org.kie}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <properties>
+            <drools.dialect.java.compiler.lnglevel>1.6</drools.dialect.java.compiler.lnglevel>
+          </properties>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
