@@ -124,11 +124,6 @@
 
     <dependency>
       <groupId>org.kie.workbench.services</groupId>
-      <artifactId>kie-wb-common-datamodel-backend</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.kie.workbench.services</groupId>
       <artifactId>kie-wb-common-refactoring-backend</artifactId>
     </dependency>
 
@@ -203,6 +198,11 @@
       <groupId>org.uberfire</groupId>
       <artifactId>uberfire-ssh-backend</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kie.workbench.services</groupId>
+      <artifactId>kie-wb-common-datamodel-backend</artifactId>
+      <scope>compile</scope>
     </dependency>
 
   </dependencies>

@@ -42,7 +42,8 @@ import org.kie.api.runtime.KieContainer;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.conf.ClockTypeOption;
 import org.kie.internal.io.ResourceFactory;
-import org.kie.workbench.common.services.backend.session.SessionService;
+
+import org.kie.workbench.common.services.datamodel.backend.server.session.SessionService;
 import org.kie.workbench.common.services.shared.project.KieModule;
 import org.kie.workbench.common.services.shared.project.KieModuleService;
 import org.mockito.ArgumentCaptor;

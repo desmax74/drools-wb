@@ -39,7 +39,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.soup.project.datamodel.commons.util.RawMVELEvaluator;
 import org.kie.soup.project.datamodel.oracle.PackageDataModelOracle;
-import org.kie.workbench.common.services.datamodel.backend.server.builder.packages.PackageDataModelOracleBuilder;
+
+import org.kie.workbench.common.services.backend.packages.PackageDataModelOracleBuilder;
 import org.kie.workbench.common.services.datamodel.model.PackageDataModelOracleBaselinePayload;
 import org.kie.workbench.common.services.datamodel.service.IncrementalDataModelService;
 import org.kie.workbench.common.widgets.client.datamodel.AsyncPackageDataModelOracle;

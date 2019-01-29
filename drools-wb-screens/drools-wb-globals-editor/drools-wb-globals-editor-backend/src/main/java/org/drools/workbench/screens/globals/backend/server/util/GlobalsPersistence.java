@@ -23,7 +23,8 @@ import org.drools.workbench.screens.globals.model.Global;
 import org.drools.workbench.screens.globals.model.GlobalsModel;
 import org.kie.soup.project.datamodel.commons.packages.PackageNameParser;
 import org.kie.soup.project.datamodel.commons.packages.PackageNameWriter;
-import org.kie.workbench.common.services.datamodel.backend.server.builder.util.GlobalsParser;
+
+import org.kie.workbench.common.services.backend.util.GlobalsParser;
 import org.uberfire.commons.data.Pair;
 
 /**

@@ -44,8 +44,9 @@ import org.guvnor.common.services.shared.metadata.model.Overview;
 import org.guvnor.common.services.shared.validation.model.ValidationMessage;
 import org.jboss.errai.bus.server.annotations.Service;
 import org.kie.soup.project.datamodel.oracle.PackageDataModelOracle;
+import org.kie.workbench.common.services.backend.server.DataModelOracleUtilities;
 import org.kie.workbench.common.services.backend.service.KieService;
-import org.kie.workbench.common.services.datamodel.backend.server.DataModelOracleUtilities;
+
 import org.kie.workbench.common.services.datamodel.backend.server.service.DataModelService;
 import org.kie.workbench.common.services.datamodel.model.PackageDataModelOracleBaselinePayload;
 import org.uberfire.backend.server.util.Paths;

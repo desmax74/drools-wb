@@ -29,9 +29,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.kie.api.runtime.KieContainer;
-import org.kie.workbench.common.services.backend.builder.service.BuildInfo;
-import org.kie.workbench.common.services.backend.builder.service.BuildInfoService;
-import org.kie.workbench.common.services.backend.project.ModuleClassLoaderHelper;
+
 import org.kie.workbench.common.services.shared.project.KieModuleService;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
@@ -49,7 +47,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ScenarioRunnerServiceImplTest {
@@ -63,17 +60,10 @@ public class ScenarioRunnerServiceImplTest {
     @Mock
     private KieModuleService moduleServiceMock;
 
-    @Mock
-    private BuildInfoService buildInfoServiceMock;
-
-    @Mock
-    private BuildInfo buildInfoMock;
 
     @Mock
     private KieContainer kieContainerMock;
 
-    @Mock
-    private ModuleClassLoaderHelper classLoaderHelperMock;
 
     @Captor
     private ArgumentCaptor<TestResultMessage> testResultMessageArgumentCaptor;
@@ -85,7 +75,7 @@ public class ScenarioRunnerServiceImplTest {
 
     @Before
     public void setup() {
-        when(classLoaderHelperMock.getModuleClassLoader(any())).thenReturn(ClassLoader.getSystemClassLoader());
+        //when(classLoaderHelperMock.getModuleClassLoader(any())).thenReturn(ClassLoader.getSystemClassLoader());
     }
 
     @Test
@@ -97,8 +87,8 @@ public class ScenarioRunnerServiceImplTest {
 
     @Test
     public void runTest() throws Exception {
-        when(buildInfoServiceMock.getBuildInfo(any())).thenReturn(buildInfoMock);
-        when(buildInfoMock.getKieContainer()).thenReturn(kieContainerMock);
+        //when(buildInfoServiceMock.getBuildInfo(any())).thenReturn(buildInfoMock);
+        //when(buildInfoMock.getKieContainer()).thenReturn(kieContainerMock);
         ScenarioSimulationModel scenarioSimulationModel = new ScenarioSimulationModel();
         scenarioSimulationModel.setSimulation(new RULESimulationCreationStrategy().createSimulation(this.path, "default"));
 
@@ -121,8 +111,8 @@ public class ScenarioRunnerServiceImplTest {
 
     @Test
     public void runFailed() throws Exception {
-        when(buildInfoServiceMock.getBuildInfo(any())).thenReturn(buildInfoMock);
-        when(buildInfoMock.getKieContainer()).thenReturn(kieContainerMock);
+        //when(buildInfoServiceMock.getBuildInfo(any())).thenReturn(buildInfoMock);
+        //when(buildInfoMock.getKieContainer()).thenReturn(kieContainerMock);
         ScenarioSimulationModel scenarioSimulationModel = new ScenarioSimulationModel();
         scenarioSimulationModel.setSimulation(new RULESimulationCreationStrategy().createSimulation(this.path, "default"));
         Scenario scenario = scenarioSimulationModel.getSimulation().getScenarioByIndex(0);

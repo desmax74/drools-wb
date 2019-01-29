@@ -45,8 +45,9 @@ import org.kie.soup.project.datamodel.imports.Import;
 import org.kie.soup.project.datamodel.imports.Imports;
 import org.kie.soup.project.datamodel.oracle.ModelField;
 import org.kie.soup.project.datamodel.oracle.PackageDataModelOracle;
+import org.kie.workbench.common.services.backend.server.DataModelOracleUtilities;
 import org.kie.workbench.common.services.backend.service.KieService;
-import org.kie.workbench.common.services.datamodel.backend.server.DataModelOracleUtilities;
+
 import org.kie.workbench.common.services.datamodel.backend.server.service.DataModelService;
 import org.kie.workbench.common.services.datamodel.model.PackageDataModelOracleBaselinePayload;
 import org.slf4j.Logger;

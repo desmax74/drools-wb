@@ -292,7 +292,7 @@
       <artifactId>slf4j-api</artifactId>
     </dependency>
 
-    <dependency>
+    <!--<dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-ext</artifactId>
     </dependency>
@@ -300,7 +300,7 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>log4j-over-slf4j</artifactId>
-    </dependency>
+    </dependency>-->
 
     <!-- Models held within AppFormer -->
     <dependency>
@@ -431,10 +431,10 @@
       <groupId>org.kie.workbench.services</groupId>
       <artifactId>kie-wb-common-datamodel-api</artifactId>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.kie.workbench.services</groupId>
       <artifactId>kie-wb-common-datamodel-backend</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.drools</groupId>
       <artifactId>drools-wb-drl-extension-server</artifactId>
@@ -1281,6 +1281,11 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
     </dependency>
 
     <!-- Experimental Deps -->

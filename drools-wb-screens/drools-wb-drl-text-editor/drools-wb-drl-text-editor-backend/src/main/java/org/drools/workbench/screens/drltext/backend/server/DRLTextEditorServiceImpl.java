@@ -45,8 +45,9 @@ import org.kie.soup.project.datamodel.commons.packages.PackageNameParser;
 import org.kie.soup.project.datamodel.commons.packages.PackageNameWriter;
 import org.kie.soup.project.datamodel.oracle.PackageDataModelOracle;
 import org.kie.soup.project.datamodel.packages.HasPackageName;
+import org.kie.workbench.common.services.backend.server.DataModelOracleUtilities;
 import org.kie.workbench.common.services.backend.service.KieService;
-import org.kie.workbench.common.services.datamodel.backend.server.DataModelOracleUtilities;
+
 import org.kie.workbench.common.services.datamodel.backend.server.service.DataModelService;
 import org.uberfire.backend.server.util.Paths;
 import org.uberfire.backend.vfs.Path;

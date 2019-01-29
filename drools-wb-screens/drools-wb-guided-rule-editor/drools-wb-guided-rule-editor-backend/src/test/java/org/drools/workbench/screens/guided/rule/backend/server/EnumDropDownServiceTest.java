@@ -18,7 +18,8 @@ package org.drools.workbench.screens.guided.rule.backend.server;
 
 import org.junit.Test;
 import org.kie.soup.project.datamodel.commons.util.RawMVELEvaluator;
-import org.kie.workbench.common.services.backend.enums.EnumDropdownServiceImpl;
+
+import org.kie.workbench.common.services.datamodel.backend.server.enums.EnumDropdownServiceImpl;
 import org.kie.workbench.common.services.shared.enums.EnumDropdownService;
 import org.uberfire.backend.vfs.Path;
 

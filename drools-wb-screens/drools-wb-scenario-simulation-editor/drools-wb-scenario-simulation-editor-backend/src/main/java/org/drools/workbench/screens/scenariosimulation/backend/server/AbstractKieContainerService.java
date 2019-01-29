@@ -16,10 +16,11 @@
 
 package org.drools.workbench.screens.scenariosimulation.backend.server;
 
+import java.util.Optional;
 import javax.inject.Inject;
 
 import org.kie.api.runtime.KieContainer;
-import org.kie.workbench.common.services.backend.builder.service.BuildInfoService;
+import org.kie.workbench.common.services.datamodel.backend.server.builder.ModuleBuildInfo;
 import org.kie.workbench.common.services.shared.project.KieModule;
 import org.kie.workbench.common.services.shared.project.KieModuleService;
 import org.uberfire.backend.vfs.Path;
@@ -29,10 +30,14 @@ public abstract class AbstractKieContainerService {
     @Inject
     private KieModuleService moduleService;
     @Inject
-    private BuildInfoService buildInfoService;
+    private ModuleBuildInfo moduleBuildInfo;
 
     protected KieContainer getKieContainer(Path path) {
         KieModule kieModule = moduleService.resolveModule(path);
-        return buildInfoService.getBuildInfo(kieModule).getKieContainer();
+        Optional<KieContainer> kieContainer = moduleBuildInfo.getOrCreateEntry(kieModule).getKieContainer();
+        if(!kieContainer.isPresent()){
+            return null;
+        }
+        return kieContainer.get();
     }
 }

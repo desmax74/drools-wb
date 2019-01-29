@@ -20,7 +20,8 @@ import java.util.Map;
 import org.kie.soup.commons.validation.PortablePreconditions;
 import org.kie.soup.project.datamodel.oracle.ModelField;
 import org.kie.soup.project.datamodel.oracle.ModuleDataModelOracle;
-import org.kie.workbench.common.services.datamodel.backend.server.builder.util.DataEnumLoader;
+
+import org.kie.workbench.common.services.backend.util.DataEnumLoader;
 import org.kie.workbench.common.services.refactoring.ResourceReference;
 import org.kie.workbench.common.services.refactoring.backend.server.impact.ResourceReferenceCollector;
 import org.kie.workbench.common.services.refactoring.service.PartType;

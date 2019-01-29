@@ -21,7 +21,8 @@ import javax.inject.Inject;
 import org.drools.workbench.screens.enums.type.EnumResourceTypeDefinition;
 import org.kie.soup.project.datamodel.commons.util.MVELEvaluator;
 import org.kie.soup.project.datamodel.oracle.ModuleDataModelOracle;
-import org.kie.workbench.common.services.datamodel.backend.server.builder.util.DataEnumLoader;
+
+import org.kie.workbench.common.services.backend.util.DataEnumLoader;
 import org.kie.workbench.common.services.datamodel.backend.server.service.DataModelService;
 import org.kie.workbench.common.services.refactoring.backend.server.indexing.AbstractFileIndexer;
 import org.kie.workbench.common.services.refactoring.backend.server.indexing.DefaultIndexBuilder;

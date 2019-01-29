@@ -19,7 +19,8 @@ package org.drools.workbench.screens.globals.backend.server.util;
 import java.util.List;
 
 import org.junit.Test;
-import org.kie.workbench.common.services.datamodel.backend.server.builder.util.GlobalsParser;
+
+import org.kie.workbench.common.services.backend.util.GlobalsParser;
 import org.uberfire.commons.data.Pair;
 
 import static org.junit.Assert.assertEquals;
@@ -33,7 +34,7 @@ public class GlobalsParserTest {
     @Test
     public void testSimpleEntry() {
         final String content = "global java.util.List myList;";
-        final List<Pair<String, String>> globals = GlobalsParser.parseGlobals( content );
+        final List<Pair<String, String>> globals = GlobalsParser.parseGlobals(content );
 
         assertNotNull( globals );
         assertEquals( 1,

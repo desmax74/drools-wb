@@ -214,6 +214,7 @@
       <artifactId>uberfire-ssh-backend</artifactId>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
 </project>

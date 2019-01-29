@@ -44,7 +44,8 @@ import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
 import org.junit.runners.model.InitializationError;
 import org.kie.api.runtime.KieSession;
-import org.kie.workbench.common.services.backend.session.SessionService;
+
+import org.kie.workbench.common.services.datamodel.backend.server.session.SessionService;
 import org.kie.workbench.common.services.shared.project.KieModule;
 import org.kie.workbench.common.services.shared.project.KieModuleService;
 import org.uberfire.backend.vfs.Path;
